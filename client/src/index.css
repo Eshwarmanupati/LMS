@@ -1,7 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
 @import "tailwindcss";
 
-*{
-  font-family: Outfit;
+@theme {
+  --font-outfit: 'Outfit', sans-serif;
+
+  --text-course-details-heading-small: 26px;
+  --leading-course-details-heading-small: 36px;
+
+  --text-course-details-heading-large: 36px;
+  --leading-course-details-heading-large: 44px;
+
+  --text-home-heading-small: 26px;
+  --leading-home-heading-small: 36px;
+
+  --text-home-heading-large: 48px;
+  --leading-home-heading-large: 56px;
+
+  --text-default: 15px;
+  --leading-default: 21px;
+}
+
+body {
+  font-family: var(--font-outfit);
 }
