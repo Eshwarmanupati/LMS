@@ -17,6 +17,8 @@
 
   --text-default: 15px;
   --leading-default: 21px;
+
+  --grid-cols-auto: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 body {
