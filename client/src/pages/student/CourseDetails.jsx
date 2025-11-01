@@ -13,7 +13,7 @@ const CourseDetails = () => {
 
   const [courseData, setCourseData] = useState(null);
   const [openSection, setOpenSection] = useState({})
-  const [isAlreadyEnrolled, setIsAlreadyEnrolled] = useState(false)
+  const [isAlreadyEnrolled] = useState(false)
   const [playerData, setPlayerData] = useState(null)
 
 
@@ -26,6 +26,7 @@ const CourseDetails = () => {
 
   useEffect(() => {
     fetchCourseData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[allCourses])
 
   const toggleSection = (index) => {
