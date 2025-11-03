@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-condition */
 import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../context/AppContext'
 import { useParams } from 'react-router-dom'
@@ -5,6 +6,7 @@ import { assets } from '../../assets/assets'
 import humanizeDuration from 'humanize-duration'
 import YouTube from 'react-youtube'
 import Footer from '../../components/student/Footer'
+import Rating from '../../components/student/Rating'
 
 const Player = () => {
 
@@ -32,6 +34,7 @@ const Player = () => {
 
   useEffect(() => {
     getCourseData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[enrolledCourses])
 
   return (
@@ -73,6 +76,7 @@ const Player = () => {
         </div>
         <div className='flex items-center gap-2 py-3 mt-10'>
           <h1 className='text-xl font-bold'>Rate this course :</h1>
+          <Rating initialRating={0}/>
         </div>
       </div>
 
